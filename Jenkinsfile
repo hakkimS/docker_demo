@@ -2,6 +2,7 @@
 
 node {
     checkout scm
+    {
 
     def fetchImage() {
   agent {
@@ -13,6 +14,7 @@ node {
     registryCredentialsId ‘docker-id’
    }
   }
+ }
 }
     
     /*
