@@ -9,7 +9,7 @@ node {
         image.inside{
            image.pull()
         /* Push the container to the custom Registry */
-        alwaysPull true
+        alwaysPull false
                   }
         
     }
