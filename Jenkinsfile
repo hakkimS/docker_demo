@@ -1,32 +1,19 @@
-pipeline{
+
+    pipeline {
     agent {
-    docker {
-        image 'maven:3.8.1-adoptopenjdk-11'
-        label 'my-defined-label'
-        args  '-v /tmp:/tmp'
-        alwayspull true
+        docker {
+              image 'maven:3.8.1-adoptopenjdk-11'
+              label 'my-defined-label'
+              alwayspull true
+        }
     }
-        
-        stages{
-        stage("pull")
-            {
-                steps{
-                    script{
-                    
-                    def image = docker.image('lmaven:3.8.1-adoptopenjdk-11')
-                   image.inside{
-                   image.pull()
-                  }
-                    }
-                
-                }
+    stages {
+        stage('Steps run inside docker here ...') {
+            steps {
+                sh "mvn --version"
             }
         }
-}
-
-
-}
-
+    }
 
 
 
