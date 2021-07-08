@@ -9,7 +9,7 @@ node {
     label “target_node ”
     image 'luhqim/node-web-app'
     alwaysPull true
-    registryUrl 'https://registry.hub.docker.com’
+    registryUrl "https://registry.hub.docker.com"
     registryCredentialsId ‘docker-id’
    }
   }
