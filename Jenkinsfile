@@ -4,7 +4,7 @@
         docker {
              registryCredentialsId   'docker-id'
             registryUrl             'https://registry.hub.docker.com/'
-            image                   'luhqim/node-web-app'
+            image                   'luhqim/node-web-app:2'
             alwaysPull                true
         }
     }
