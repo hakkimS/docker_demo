@@ -13,7 +13,7 @@ pipeline{
                 steps{
                     script{
                     
-                    def image = docker.image('lmaven:3.8.1-adoptopenjdk-11)
+                    def image = docker.image('lmaven:3.8.1-adoptopenjdk-11')
                    image.inside{
                    image.pull()
                   }
