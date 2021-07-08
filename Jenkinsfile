@@ -2,6 +2,8 @@
 
 node {
     checkout scm
+    
+    stage ("docker"){
    
     docker {
     label “target_node ”
@@ -10,9 +12,9 @@ node {
     //registryUrl "https://registry.hub.docker.com"
     registryCredentialsId ‘docker-id’
    }
-
+    }
     
-    
+    stage("pull"){
     docker.withRegistry('https://registry.hub.docker.com/', 'docker-id') {
         
         def image = docker.image('luhqim/node-web-app')
@@ -20,6 +22,7 @@ node {
            image.pull() 
                   }
         
+    }
     }
 }
 
