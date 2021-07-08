@@ -2,7 +2,7 @@
 
 node {
     checkout scm
-    {
+   stage("pull") {
 
     def fetchImage() {
   agent {
