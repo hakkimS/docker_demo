@@ -10,7 +10,7 @@ node {
     //registryUrl "https://registry.hub.docker.com"
     registryCredentialsId ‘docker-id’
    }
-  }
+
     
     
     docker.withRegistry('https://registry.hub.docker.com/', 'docker-id') {
