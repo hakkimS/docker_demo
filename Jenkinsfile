@@ -7,7 +7,7 @@ node {
   agent {
    docker {
     label “target_node ”
-    image 'rhttps://registry.hub.docker.com/image:latest'
+    image 'https://registry.hub.docker.com/image:latest'
     alwaysPull true
     registryUrl 'https://registry.hub.docker.com’
     registryCredentialsId ‘docker-id’
