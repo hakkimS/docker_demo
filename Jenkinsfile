@@ -18,7 +18,6 @@ node {
         def image = docker.image('luhqim/node-web-app')
         image.inside{
            image.pull() 
-        alwaysPull false
                   }
         
     }
