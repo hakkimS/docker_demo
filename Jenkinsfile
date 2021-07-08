@@ -2,11 +2,8 @@
 
 node {
     checkout scm
- docker.withRegistry('https://registry.hub.docker.com/', 'docker-id') {
-
-    def fetchImage() {
-  agent {
-   docker {
+   
+    docker {
     label “target_node ”
     image 'luhqim/node-web-app'
     alwaysPull true
@@ -14,10 +11,8 @@ node {
     registryCredentialsId ‘docker-id’
    }
   }
- }
-}
     
-    /*
+    
     docker.withRegistry('https://registry.hub.docker.com/', 'docker-id') {
         
         def image = docker.image('luhqim/node-web-app')
@@ -27,6 +22,5 @@ node {
                   }
         
     }
-*/
 }
 
